@@ -4,13 +4,23 @@
 
 它复现的是 macOS Console 里的思路：读取 iPhone 实时系统日志，过滤 Spotlight / Settings 里写出的 `PipelineCompleteness`，然后显示真实百分比。
 
-## 下载
+## 普通用户下载
 
-下载仓库里的离线包：
+不需要 clone，不需要懂 GitHub。
 
-[dist/iOS_Indexing_Checker_Windows_NoPython.zip](dist/iOS_Indexing_Checker_Windows_NoPython.zip)
+等 GitHub Release 发布后，普通用户只需要点这里下载：
+
+[下载 Windows 离线包](https://github.com/CZJ0219/ios27-beta-indexing-progress-windows/releases/latest/download/iOS_Indexing_Checker_Windows_NoPython.zip)
+
+备用下载位置：
+
+[仓库内 dist/iOS_Indexing_Checker_Windows_NoPython.zip](dist/iOS_Indexing_Checker_Windows_NoPython.zip)
 
 这个包不需要用户安装 Python，也不需要联网下载依赖。
+
+## 开发者查看源码
+
+只有想研究源码、自己构建或提交改进的人才需要 clone 仓库。
 
 ## 使用方法
 

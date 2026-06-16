@@ -4,13 +4,23 @@ A small Windows utility for checking the actual iPhone "Indexing in Progress" pe
 
 It follows the same idea as the macOS Console method: stream live iPhone logs, look for Spotlight / Settings indexing messages, and extract `PipelineCompleteness`.
 
-## Download
+## Download for Regular Users
 
-Download the offline package from this repository:
+No clone needed. No GitHub experience needed.
+
+Once the GitHub Release is published, download the offline package here:
+
+[Download Windows offline package](https://github.com/CZJ0219/ios27-beta-indexing-progress-windows/releases/latest/download/iOS_Indexing_Checker_Windows_NoPython.zip)
+
+Fallback:
 
 [dist/iOS_Indexing_Checker_Windows_NoPython.zip](dist/iOS_Indexing_Checker_Windows_NoPython.zip)
 
 End users do not need to install Python or download dependencies.
+
+## Source Code
+
+Only developers need to clone this repository.
 
 ## Quick Start
 

@@ -6,13 +6,19 @@
 
 ## 下载
 
-从仓库下载：
+最简单的方式是从 GitHub Release 下载：
+
+```text
+https://github.com/CZJ0219/ios27-beta-indexing-progress-windows/releases/latest/download/iOS_Indexing_Checker_Windows_NoPython.zip
+```
+
+备用位置是仓库里的：
 
 ```text
 dist/iOS_Indexing_Checker_Windows_NoPython.zip
 ```
 
-下载后请先解压，不要直接在 zip 预览窗口里运行。
+普通用户不需要 clone 仓库。下载后请先解压，不要直接在 zip 预览窗口里运行。
 
 ## 一键使用
 
