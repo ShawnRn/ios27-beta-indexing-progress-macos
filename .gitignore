@@ -1,0 +1,27 @@
+# Runtime logs and temp files
+ios-indexing-checker.log
+runtime-tmp/
+*.log
+
+# Build caches
+.build-nopython/
+build/
+__pycache__/
+*.pyc
+*.pyo
+*.spec
+
+# Local extracted packages
+outputs/
+outputs/iOS_Indexing_Checker_Windows/
+outputs/iOS_Indexing_Checker_Windows_NoPython/
+outputs/runtime-tmp/
+
+# Local workspace scratch
+work/
+
+# OS/editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
