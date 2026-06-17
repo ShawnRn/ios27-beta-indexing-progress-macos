@@ -25,3 +25,8 @@ Thumbs.db
 .DS_Store
 .vscode/
 .idea/
+
+# Swift PM and macOS Build
+.build/
+dist/
+releases/

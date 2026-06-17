@@ -3,76 +3,69 @@
   <strong>中文</strong>
 </p>
 
-# iOS 27 Beta 索引进度查询工具（Windows）
+# iOS Spotlight 索引进度查询工具
 
-当 iPhone 显示“正在索引 / Indexing in Progress”，但界面没有告诉你百分比时，可以用这个 Windows 小工具看一下当前进度。
+当 iPhone 升级 iOS 后显示“正在索引 / Indexing in Progress”，但系统设置界面没有告诉你百分比进度时，可以用这个小工具看一下当前的详细进度。
 
-把 iPhone 用 USB 接到电脑上，运行工具，它会显示手机日志里最新出现的索引进度百分比。
+本项目现已提供 **macOS 原生图形化客户端**（完美适配 macOS 14+）和 **Windows 命令行版本**。
 
-## 下载
+---
 
-[下载 Windows ZIP 包（GitHub）](https://github.com/CZJ0219/ios27-beta-indexing-progress-windows/releases/latest/download/iOS_Indexing_Checker_Windows_NoPython.zip)
+## 🚀 macOS 原生图形化 App
 
-[下载 Windows ZIP 包（腾讯微云）](https://share.weiyun.com/H5B7bCUz)
+使用最新的 **SwiftUI 6** 与 **Swift 结构化并发** 编写，专为 macOS 设计的原生桌面客户端。
 
-## 使用方法
+### 功能特性：
+- **莫兰迪高级灰设计**：采用低饱和度的莫兰迪色系（灰蓝与烟粉）进度环，配合平滑的进度递增动画。
+- **智能连接检测**：接入 iPhone 后自动侦测，支持多重通道（USB/Wi-Fi）去重并**自动优先使用更稳定的 USB 物理连接**。
+- **实时日志流过滤**：实时滚动展示设备 syslog 并提取 Spotlight 日志，支持关键字搜索与一键导出。
+- **一键依赖配置**：应用内含一键配置引导，后台自动静默安装 `pymobiledevice3` 所需运行环境。
+- **离线日志分析**：支持将拖拽导入已有的日志文本文件（.txt 或 .log），瞬间匹配出进度百分比。
 
+### 下载与安装：
+- **[下载最新版 macOS DMG 镜像](https://github.com/ShawnRn/Spotlight-Progress/releases/latest/download/SpotlightProgress_1.0.0_arm64.dmg)**。
+- 双击打开 DMG，将 `SpotlightProgress.app` 拖入 `Applications` 文件夹中即可运行。
+
+### 使用方法：
+1. 用 USB 线连接 iPhone 到 Mac。
+2. 解锁 iPhone 并信任此电脑。
+3. 在 iPhone 上打开“设置”App。
+4. 在侧边栏选中您的 iPhone，点击“**开始读取进度**”按钮。
+
+---
+
+## 🪟 Windows 命令行版本
+
+适合 Windows 用户使用的轻量级打包脚本。
+
+### 下载：
+- **[下载 Windows ZIP 包（GitHub）](https://github.com/CZJ0219/ios27-beta-indexing-progress-windows/releases/latest/download/iOS_Indexing_Checker_Windows_NoPython.zip)**
+- **[下载 Windows ZIP 包（腾讯微云）](https://share.weiyun.com/H5B7bCUz)**
+
+### 使用方法：
 1. 下载并解压 `iOS_Indexing_Checker_Windows_NoPython.zip`。
-2. 用 USB 线连接 iPhone。
-3. 解锁 iPhone。
-4. 如果 iPhone 弹出提示，点“信任此电脑”。
-5. 在 iPhone 上打开“设置”App。
-6. 双击 `Start-iOS-Indexing-Checker.cmd`。
-7. 按窗口提示按 Enter。
+2. 用 USB 线连接 iPhone 到电脑并解锁。
+3. 如果 iPhone 弹出提示，点击“信任此电脑”。
+4. 在 iPhone 上打开“设置”App。
+5. 双击运行解压得到的 `Start-iOS-Indexing-Checker.cmd`。
+6. 根据窗口提示按 Enter，正常情况下会看到如 `iOS indexing progress: 85%` 的输出。
 
-正常情况下会看到类似：
+---
 
-```text
-iOS indexing progress: 85%
-```
+## ⚠️ 常见排查与故障解决
 
-如果没有马上出现百分比，不一定是卡住。请保持 iPhone 解锁，稍微多等一会儿；iPhone 不会每秒都报告索引进度。
+- 保持 iPhone 始终处于解锁状态，并在 iPhone 上打开“设置”App。
+- 确认已经信任此电脑。
+- 如果没有马上出现百分比，请保持连接并稍微等待。iPhone 不会每秒都上报索引日志。
+- 拔掉 USB 数据线重新插一次，换一个 USB 接口或更换数据线。
+- 更多排查方法见：[故障排查](docs/TROUBLESHOOTING.md)
 
-## 需要什么
+## 🔒 隐私声明
 
-- Windows 10 或 Windows 11。
-- 一台 iOS 27 beta 的 iPhone。
-- 一根支持数据传输的 USB 线。
-- 如果这台电脑以前从没连过 iPhone，请先安装 Apple Devices 或 iTunes。
+此工具完全在您的电脑本机运行。它不会上传任何日志，不会收集 telemetry 数据，也不会连接外部的项目服务器，100% 保护您的设备隐私。
 
-如果 Windows 的文件资源管理器、Apple Devices 或 iTunes 都看不到这台 iPhone，这个工具也看不到。
-
-## 如果看起来没反应
-
-- 保持 iPhone 解锁。
-- 保持 iPhone 上的“设置”App 打开。
-- 确认已经点过“信任此电脑”。
-- 拔掉 USB 线再插一次。
-- 换一个 USB 口，或者换一根线。
-
-更多排查方法见：[故障排查](docs/TROUBLESHOOTING.md)
-
-## 隐私
-
-工具只在你的电脑本机运行。它不会上传日志，不会收集遥测，也不会连接本项目的服务器。
-
-同目录下可能会生成一份用于排查问题的本地日志。如果你要公开分享日志，请先遮盖设备名、设备 ID、Apple ID、手机号、邮箱，以及任何你不想公开的信息。
-
-<details>
-<summary>给开发者和贡献者</summary>
-
-大多数人只需要下载上面的 ZIP 包。如果你想看源码、自己构建，或参与改进，可以继续查看：
-
-- [开发者说明](docs/DEVELOPER.md)
-- [隐私说明](docs/PRIVACY.md)
-- [更新日志](CHANGELOG.md)
-
-</details>
-
-## 免责声明
-
-这不是 Apple 官方工具，也不隶属于 Apple。请只在你自己的 iPhone，或你被授权检查的 iPhone 上使用。
+---
 
 ## 许可证
 
-MIT License. See [LICENSE](LICENSE).
+基于 MIT 许可证开源。详见 [LICENSE](LICENSE)。

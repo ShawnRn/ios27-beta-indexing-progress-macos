@@ -3,76 +3,69 @@
   <a href="README.zh-CN.md">中文</a>
 </p>
 
-# iOS 27 Beta Indexing Progress Checker for Windows
+# iOS Spotlight Indexing Progress Checker
 
-A simple Windows tool for people whose iPhone says "Indexing in Progress" but does not show a percentage.
+A simple tool for people whose iPhone says "Indexing in Progress" after an iOS upgrade but does not show a percentage.
 
-Connect your iPhone over USB, run the tool, and it will show the latest indexing percentage reported by the phone.
+This project now provides a **Native macOS Graphical App** (optimized for macOS 14+) alongside the original **Windows Command-Line scripts**.
 
-## Download
+---
 
-[Download the Windows ZIP by GitHub](https://github.com/CZJ0219/ios27-beta-indexing-progress-windows/releases/latest/download/iOS_Indexing_Checker_Windows_NoPython.zip)
+## 🚀 Native macOS Graphical App
 
-[Download ZIP by Tencent Weiyun](https://share.weiyun.com/H5B7bCUz)
+A premium native desktop client written with the latest **SwiftUI 6** and **Swift Structured Concurrency**.
 
-## How To Use
+### Features:
+- **Muted Morandi Design**: Featuring a beautiful circular progress bar with a soft Morandi palette (blue-gray & rose) and smooth numbers animation.
+- **Smart USB Detection**: Instant USB connect detection with automatic duplication filter and **USB physical connection priority** for maximum stability.
+- **Real-time Log Filtering**: Stream device syslog directly and filter out Spotlight indexing status, with search and export capabilities.
+- **One-click Dependency Setup**: In-app step-by-step guidance to automatically install `pymobiledevice3` environment in the background.
+- **Offline Log Analyzer**: Simply drag and drop any syslog text file (.txt or .log) to instantly parse and extract Spotlight completeness.
 
+### Download & Installation:
+- **[Download the latest macOS DMG Package](https://github.com/ShawnRn/Spotlight-Progress/releases/latest/download/SpotlightProgress_1.0.0_arm64.dmg)**.
+- Double-click to open the DMG, drag `SpotlightProgress.app` to your `Applications` folder and run it.
+
+### How to Use:
+1. Connect your iPhone to your Mac via USB.
+2. Unlock your iPhone and tap "Trust This Computer".
+3. Open the "Settings" App on your iPhone.
+4. Select your iPhone from the sidebar list, then click "**Start Monitoring**".
+
+---
+
+## 🪟 Windows Command-Line Version
+
+A lightweight script package tailored for Windows users.
+
+### Download:
+- **[Download the Windows ZIP Package (GitHub)](https://github.com/CZJ0219/ios27-beta-indexing-progress-windows/releases/latest/download/iOS_Indexing_Checker_Windows_NoPython.zip)**
+- **[Download the Windows ZIP Package (Tencent Weiyun)](https://share.weiyun.com/H5B7bCUz)**
+
+### How to Use:
 1. Download and unzip `iOS_Indexing_Checker_Windows_NoPython.zip`.
-2. Connect your iPhone with a USB cable.
-3. Unlock the iPhone.
-4. Tap "Trust This Computer" if the iPhone asks.
-5. Open the Settings app on the iPhone.
-6. Double-click `Start-iOS-Indexing-Checker.cmd`.
-7. Press Enter in the tool window when prompted.
+2. Connect your iPhone via USB and unlock it.
+3. Tap "Trust This Computer" when prompted.
+4. Open the "Settings" App on your iPhone.
+5. Double-click `Start-iOS-Indexing-Checker.cmd`.
+6. Press Enter when prompted. You will see outputs like `iOS indexing progress: 85%`.
 
-When it works, you will see a line like this:
+---
 
-```text
-iOS indexing progress: 85%
-```
+## ⚠️ Troubleshooting
 
-If a percentage does not appear immediately, leave the iPhone unlocked and wait a little longer. The phone does not report indexing progress every second.
-
-## Requirements
-
-- Windows 10 or Windows 11.
-- An iPhone running iOS 27 beta.
-- A USB cable that supports data transfer.
-- Apple Devices or iTunes installed if this PC has never connected to an iPhone before.
-
-If Windows cannot see the iPhone in File Explorer, Apple Devices, or iTunes, this tool will not be able to see it either.
-
-## If It Seems Stuck
-
-- Keep the iPhone unlocked.
-- Keep the Settings app open on the iPhone.
+- Keep the iPhone unlocked and leave the Settings app open on the phone.
 - Confirm that you tapped "Trust This Computer".
-- Unplug and reconnect the USB cable.
-- Try another USB port or another cable.
+- If a percentage does not appear immediately, leave it connected and wait. The phone does not report indexing progress every second.
+- Unplug and reconnect the USB cable, or try another USB port or cable.
+- More help: [Troubleshooting](docs/TROUBLESHOOTING.md)
 
-More help: [Troubleshooting](docs/TROUBLESHOOTING.md)
+## 🔒 Privacy
 
-## Privacy
+The tool runs 100% locally on your computer. It does not upload logs, collect telemetry, or connect to any remote server, protecting your device privacy.
 
-The tool runs locally on your PC. It does not upload logs, collect telemetry, or connect to a server run by this project.
-
-A local troubleshooting log may be created next to the tool. If you share that log publicly, remove device names, device IDs, Apple IDs, phone numbers, emails, and anything else you do not want to publish.
-
-<details>
-<summary>For developers and contributors</summary>
-
-Most people only need the ZIP above. If you want to inspect the source code or build the package yourself, read:
-
-- [Developer notes](docs/DEVELOPER.md)
-- [Privacy notes](docs/PRIVACY.md)
-- [Changelog](CHANGELOG.md)
-
-</details>
-
-## Disclaimer
-
-This is not an Apple tool and is not affiliated with Apple. Use it only with an iPhone you own or have permission to inspect.
+---
 
 ## License
 
-MIT License. See [LICENSE](LICENSE).
+MIT License. See [LICENSE](LICENSE) for details.
